@@ -4,21 +4,6 @@ static final int BLOCKSIZE = 3;
 static final int BOARDSIZE = 9;
 
     public static void main(String[] args) {
-    	/*
-    	int [] line1 = new int[3];
-    	line1[0] = 2;
-    	line1[1] = 4;
-    	line1[2] = 6;
-
- //   	printLine(line1);
-
-    	int [] line2 = new int[3];
-    	line2[0] = 3;
-    	line2[1] = 7;
-    	line2[2] = 9;
-
- //   	printLine(line2);
- */
 
     	int [][] sBoard = new int [9][9];
     	initBoard (sBoard);
@@ -36,30 +21,6 @@ static final int BOARDSIZE = 9;
 
     	printBoard(sBoard);
 
-
-
-/*
-	try { 
-		Thread.sleep(1000);
-		Runtime.getRuntime().exec("ls");} 
-	catch (Exception e){}
-
-        System.out.println("-------------");
-        System.out.println("|   |   |   |");
-        System.out.println("| - | - | - |");
-        System.out.println("|   |   |   |");
-
-        System.out.println("-------------");
-        System.out.println("|   |   |   |");
-        System.out.println("| - | 2 | - |");
-        System.out.println("|   |   |   |");
-
-        System.out.println("-------------");
-        System.out.println("|   |   |   |");
-        System.out.println("| - | - | - |");
-        System.out.println("|   |   |   |");
-        System.out.println("-------------");
-        */
     }
 
     static void printLine(int[] contents){
