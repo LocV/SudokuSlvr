@@ -21,31 +21,16 @@ static final int BOARDSIZE = 9;
 
     	printBoard(sBoard);
 
-    }
+        int [][] cBoard = cloneBoard(sBoard);
 
-    static void printLine(int[] contents){
+        printBoard(cBoard);
 
-    	System.out.println("-------------");
-        System.out.println("|   |   |   |");
-
-        for (int i = 0; i < 3; i++){
-        	System.out.print("| ");
-        	System.out.print(contents[i]);
-        	System.out.print(" ");
-        }
-        System.out.print("|\n");
-        System.out.println("|   |   |   |");
-
-        System.out.println("-------------");
-        System.out.println("|   |   |   |");
-        System.out.println("| - | 1 | - |");
-        System.out.println("|   |   |   |");
-
-        System.out.println("-------------");
-        System.out.println("|   |   |   |");
-        System.out.println("| - | - | - |");
-        System.out.println("|   |   |   |");
-        System.out.println("-------------");
+        System.out.println("Make a change and test the deep copy");
+        // Make a change and test the deep copy
+        sBoard [0][8] = 9;
+        cBoard [8][0] = 1;
+        printBoard(sBoard);
+        printBoard(cBoard);
 
     }
 
@@ -82,7 +67,7 @@ static final int BOARDSIZE = 9;
     }
 
     static boolean isValidRow (int[][] board, int rowIndex, int colIndex){
-    	// Add code here
+    	// Add code here`
     	return false;
 
     }
@@ -90,6 +75,26 @@ static final int BOARDSIZE = 9;
     static boolean isValidColumn (int[][] board, int rowIndex, int colIndex){
     	// Add code here
     	return false;
+
+    }
+
+    static int getNextValue (int[][] board, int rowIndex, int colIndex){
+        return 0;
+
+    }
+
+    // clone two dimensional array using Array deep copy utility
+    public static int[][] cloneBoard(int[][] sourceBoard) {
+        int[][] copyBoard = new int[sourceBoard.length][sourceBoard.length];
+
+        for (int i = 0; i < sourceBoard.length; i++) {
+            copyBoard[i] = java.util.Arrays.copyOfRange(sourceBoard[i], 0, BOARDSIZE);
+        }
+
+        return copyBoard;
+    }
+
+    static void solveBoard (int[][] board){
 
     }
 
